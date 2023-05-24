@@ -1,0 +1,24 @@
+.banner {
+    display: flex;
+    justify-content: center;
+
+    &__bg {
+        background-repeat: no-repeat;
+        background-blend-mode: darken;
+        height: 223px;
+        width: 100%;
+        border-radius: 25px;
+        margin-top: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__heading {
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 68.45px;
+        color: white;
+
+    }
+}

@@ -1,0 +1,7 @@
+$mobile-breakpoint : 768px!default;
+$tablet-breakpoint : 992px!default;
+$desktop-breakpoint : 992px!default;
+
+$mobile : "only screen and (max-width: #{$mobile-breakpoint} )";
+$tablet : "only screen and (max-width: #{$tablet-breakpoint} )";
+$desktop : "only screen and (min-width: #{$desktop-breakpoint} )";
