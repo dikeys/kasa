@@ -10,8 +10,8 @@ const Home = () => {
      const [logements, setLogements] = useState([]);
 
      useEffect(() => {
-       fetch('https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P9+React+1/logements.json')
-         .then((response) => response.json())
+       fetch('/data/logements.json')
+         .then((response) => console.log(response))
          .then((data) => {
            setLogements(data);
          })
@@ -23,10 +23,8 @@ const Home = () => {
     return (
         <div>
             <Banner url={bannerHome} text={text}/>
-            <div>
-            {logements.map((logement) => (
-          <li key={logement.id}>{logement.nom}</li>
-        ))}
+            <div className='card-wrapper'>
+            <Card />
                 
             </div>
             <Footer/>

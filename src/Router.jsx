@@ -1,5 +1,4 @@
-// import logo from './logo.svg';
-import './App.css';
+// import './App.css';
 import './styles/style.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Home from './pages/Home/Home';
@@ -7,7 +6,7 @@ import ErrorPage from './pages/ErrorPage/ErrorPage';
 import About from './pages/About/About';
 import Header from './components/Header/Header';
 
-function App() {
+function Router() {
   return (
     <BrowserRouter>
       <Header />
@@ -22,4 +21,4 @@ function App() {
   );
 }
 
-export default App;
+export default Router;
