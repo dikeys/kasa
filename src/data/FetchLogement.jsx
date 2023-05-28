@@ -1,20 +1,17 @@
-import React from 'react';
 import{ useEffect, useState } from 'react';
 
 const Data = () => {
     const [logements, setLogements] = useState([]);
-
+   
     useEffect(() => {
-      fetch('/data/logements.json')
-        .then((response) => console.log(response))
-        .then((data) => {
-          setLogements(data);
-        })
+      fetch('/logements.json')
+        .then((response) =>response.json())
+        .then((data) => setLogements(data))
         .catch((error) => {
           console.log(error);
         });
     }, []);
-    
+    return logements
 };
 
 export default Data;

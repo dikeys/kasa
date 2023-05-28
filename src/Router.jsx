@@ -1,10 +1,10 @@
-// import './App.css';
 import './styles/style.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Home from './pages/Home/Home';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
 import About from './pages/About/About';
 import Header from './components/Header/Header';
+import Accommodation from './pages/Accommodation/Accommodation';
 
 function Router() {
   return (
@@ -16,6 +16,7 @@ function Router() {
         </Route>
         <Route path='/about' element={<About />}></Route>
         <Route path='*' element={<ErrorPage />}></Route>
+        <Route path='/Accommodation/:id' element={<Accommodation />}></Route>
       </Routes>
     </BrowserRouter>
   );

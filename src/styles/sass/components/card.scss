@@ -1,19 +1,21 @@
-.card-wrapper{
+.card-wrapper {
   margin-top: 43px;
   background: #F2F0F0;
   border-radius: 25px;
   padding: 56px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
 }
 
 .card {
-
-  background: linear-gradient(180deg, rgba(255,96,96, 1) 0%, rgba(0, 0, 0, 0.5) 100%);
   width: 340px;
   height: 340px;
   display: flex;
   align-items: flex-end;
   border-radius: 10px;
-
+margin-bottom: 15px;
   &__heading {
     color: white;
     padding: 20px;

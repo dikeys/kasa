@@ -1,0 +1,36 @@
+.accommodation{
+    &__informations{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title{
+        color: $primary;
+        font-size: 36px;
+        font-weight : 500;
+        line-height: 51.34px;
+        margin-bottom: 0;
+    }
+
+    &__location{
+        color: $primary;
+        margin-top: 1px;
+        font-size: 18px;
+        font-weight : 500;
+        line-height: 25.67px;
+        margin-bottom: 20px;
+    }
+    &__tag{
+        display: flex;
+    }
+    &__profil{
+
+    }
+    &__description-container{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__equipment{
+        margin: 0;
+    }
+}
