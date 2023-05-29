@@ -1,6 +1,9 @@
-@import "./base/normalize.scss";
 @import "./utils/variable.scss";
+@import "./base/normalize.scss";
+@import "./utils/responsive.scss";
 @import "./components/button.scss";
+@import "./components/rate.scss";
+@import "./components/picture.scss";
 @import "./components/tag.scss";
 @import "./components/collapse.scss";
 @import "./components/cover.scss";

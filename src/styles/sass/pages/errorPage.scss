@@ -26,4 +26,27 @@
     }
 }
 
+@media #{$mobile} {
+    &__code{
+       
+        font-size: 96px;
+        
+    }
+    &__message{
+        font-size: 18px;
+       text-align: center;
+ width: 300px;
+    }
+    &--break{
+        overflow-wrap: break-word;
+    }
+
+    &__link-home{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: 176px;
+    }
+}
+
 }

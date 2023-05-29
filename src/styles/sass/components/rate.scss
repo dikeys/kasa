@@ -1,0 +1,15 @@
+.rate{
+    &--size{
+        font-size: 35px;
+    }
+    &--pink{
+        color: $primary;
+    }
+    &--gray{
+        color: gray;
+    }
+    @media #{$mobile} {
+        display: flex;
+        align-items: flex-end;
+    }
+}

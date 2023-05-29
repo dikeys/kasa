@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
     const text = "Chez vous, partout et ailleurs"
-    console.log(Data())
     return (
         <div>
             <Banner url={bannerHome} text={text} />

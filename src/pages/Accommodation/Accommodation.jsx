@@ -4,16 +4,17 @@ import Data from '../../data/FetchLogement';
 import Cover from '../../components/Cover/Cover';
 import Tag from '../../components/Tag/Tag';
 import Collapse from '../../components/Collapse/Collapse';
+import Picture from '../../components/Picture/Picture';
+import Rate from '../../components/Rate/Rate';
 
 const Accommodation = () => {
     const params = useParams()
-    console.log(params)
     const houseDetail = Data().filter((obj) => obj.id === params.id)
 
     return (
         <div className='accommodation'>
             {houseDetail.map((detail) => (
-                <section>
+                <section key={detail.id}>
                     <Cover img={detail.cover} />
                     <section className='accommodation__informations'>
                         <section>
@@ -26,16 +27,23 @@ const Accommodation = () => {
                                 ))}
                             </ul>
                         </section>
-                        <section className='accommodation__profil'>
-                        <div>
-                                <p>{detail.host.name}</p>
-
-                            </div>
+                        <section>
+                            <section className='accommodation__profil'>
+                                <div>
+                                    <p className='accommodation__user'>{detail.host.name.split(' ')[0]}</p>
+                                    <p className='accommodation__user'>{detail.host.name.split(' ')[1]}</p>
+                                </div>
+                                <div>
+                                    <Picture img={detail.host.picture} />
+                                </div>
+                                
+                            </section>
+                            <Rate rating={detail.rating}/>
                         </section>
                     </section>
                     <section className='accommodation__description-container'>
                         <Collapse title="Description" description={detail.description} size='45%' status={true} />
-                        <Collapse title="Equipement" description={detail.equipments.map((equi) => (<p key={equi} className='accommodation__equipment'>{equi}</p>))} size='45%' status={true} />
+                        <Collapse title="Equipements" description={detail.equipments.map((equipment) => (<p key={equipment} className='accommodation__equipment'>{equipment}</p>))} size='45%' status={true} />
                     </section>
                 </section>
             ))}
