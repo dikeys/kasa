@@ -3,6 +3,7 @@
   justify-content: space-between;
   margin-top: 1%;
 
+
   &__wrapper {
     width: 16%;
   }
@@ -54,4 +55,23 @@
       }
     }
   }
+  @media #{$mobile}{
+    &__logo{
+      height: 100%;
+    }
+    &__wrapper {
+      width: 30%;
+    }
+    &__navigation {
+     width: 100%;
+
+     &--link {
+      font-size: 14px;
+      font-weight: 100;
+    }
+
+    }
+
+  }
 }
+

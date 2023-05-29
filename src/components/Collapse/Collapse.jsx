@@ -4,7 +4,14 @@ import arrowDown from "../../assets/img/arrow-down.svg";
 import styled from "styled-components";
 
 const Details = styled.details`
-width: ${({size})=> size}
+
+@media screen and (min-width : 1201px) {
+  width: ${({size})=> size}
+}
+
+@media screen and (max-width : 1200px) {
+  width:100%
+}
 `
 const Collapse = ({ title, description, size = "100%", status  }) => {
   return (

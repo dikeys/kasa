@@ -1,36 +1,67 @@
-.accommodation{
-    &__informations{
+.accommodation {
+    &__informations {
         display: flex;
         justify-content: space-between;
     }
-    &__title{
+
+    &__title {
         color: $primary;
         font-size: 36px;
-        font-weight : 500;
+        font-weight: 500;
         line-height: 51.34px;
         margin-bottom: 0;
     }
 
-    &__location{
+    &__location {
         color: $primary;
         margin-top: 1px;
         font-size: 18px;
-        font-weight : 500;
+        font-weight: 500;
         line-height: 25.67px;
         margin-bottom: 20px;
     }
-    &__tag{
+
+    &__user {
+        color: $primary;
+        margin: 0 10px;
+        font-size: 18px;
+        line-height: 25.67px;
+        font-weight: 500;
+    }
+
+    &__tag {
         display: flex;
     }
-    &__profil{
 
+    &__profil {
+        display: flex;
+        justify-content: space-between;
+        align-items: top;
+        margin-top: 20px;
     }
-    &__description-container{
+
+    &__description-container {
         display: flex;
         justify-content: space-between;
     }
 
-    &__equipment{
+    &__equipment {
         margin: 0;
+    }
+
+    @media #{$mobile}{
+        &__informations {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        } 
+        &__profil {
+           float: right;
+        }
+        
+        &__description-container {
+            display: flex;
+            flex-direction: column;
+        }
     }
 }

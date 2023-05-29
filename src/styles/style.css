@@ -21,6 +21,11 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0 20px;
+  }
+}
 /**
      * Render the `main` element consistently in IE.
      */
@@ -332,6 +337,28 @@ ul {
   border: none;
 }
 
+.rate--size {
+  font-size: 35px;
+}
+.rate--pink {
+  color: #FF6060;
+}
+.rate--gray {
+  color: gray;
+}
+@media only screen and (max-width: 1200px) {
+  .rate {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+.picture__img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
 .tag {
   background: #FF6060;
   padding: 2px 15px;
@@ -388,6 +415,11 @@ ul {
   line-height: 34.22px;
   border-radius: 5px;
 }
+@media only screen and (max-width: 1200px) {
+  .collapse {
+    width: 100%;
+  }
+}
 
 details[open] summary .collapse__arrow-up {
   display: none;
@@ -430,6 +462,20 @@ details[open] summary .collapse__arrow-down {
   font-size: 48px;
   line-height: 68.45px;
   color: white;
+}
+@media only screen and (max-width: 1200px) {
+  .banner__heading {
+    margin-left: 16px;
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 24px;
+    width: 223px;
+  }
+  .banner__bg {
+    height: 111px;
+    display: flex;
+    justify-content: flex-start;
+  }
 }
 
 .footer {
@@ -505,6 +551,21 @@ details[open] summary .collapse__arrow-down {
 .header__navigation--link a:active, .header__navigation--link a:visited {
   color: #FF6060;
 }
+@media only screen and (max-width: 1200px) {
+  .header__logo {
+    height: 100%;
+  }
+  .header__wrapper {
+    width: 30%;
+  }
+  .header__navigation {
+    width: 100%;
+  }
+  .header__navigation--link {
+    font-size: 14px;
+    font-weight: 100;
+  }
+}
 
 .card-wrapper {
   margin-top: 43px;
@@ -537,6 +598,16 @@ details[open] summary .collapse__arrow-down {
   font-weight: 500;
   font-size: 18px;
   line-height: 25.67px;
+}
+@media only screen and (max-width: 1200px) {
+  .card {
+    width: 388px;
+  }
+  .card-wrapper {
+    justify-content: center;
+    padding: 0;
+    background: none;
+  }
 }
 
 .error {
@@ -586,8 +657,21 @@ details[open] summary .collapse__arrow-down {
   line-height: 25.67px;
   margin-bottom: 20px;
 }
+.accommodation__user {
+  color: #FF6060;
+  margin: 0 10px;
+  font-size: 18px;
+  line-height: 25.67px;
+  font-weight: 500;
+}
 .accommodation__tag {
   display: flex;
+}
+.accommodation__profil {
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  margin-top: 20px;
 }
 .accommodation__description-container {
   display: flex;
@@ -595,6 +679,20 @@ details[open] summary .collapse__arrow-down {
 }
 .accommodation__equipment {
   margin: 0;
+}
+@media only screen and (max-width: 1200px) {
+  .accommodation__informations {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .accommodation__profil {
+    float: right;
+  }
+  .accommodation__description-container {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

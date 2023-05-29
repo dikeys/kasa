@@ -51,6 +51,10 @@
         border-radius: 5px;
     }
 
+    @media #{$mobile}{
+    width: 100%;
+    }
+
 }
 
 details[open] summary .collapse__arrow-up {
@@ -60,3 +64,4 @@ details[open] summary .collapse__arrow-up {
 details[open] summary .collapse__arrow-down {
     display: initial;
 }
+
