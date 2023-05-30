@@ -15,7 +15,7 @@ The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
 ### `Files`
-Create React App : /kasa.\\
+Create React App : /kasa.\
 Router : src/Router.jsx
 
 ### `npm test`
