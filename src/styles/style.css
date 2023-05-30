@@ -429,17 +429,37 @@ details[open] summary .collapse__arrow-down {
   display: initial;
 }
 
-.cover {
+.slideshow {
   display: flex;
   justify-content: center;
   border-radius: 25px;
   overflow: hidden;
   margin-top: 25px;
 }
-.cover__img {
+.slideshow__prev {
+  left: 0;
+}
+.slideshow__next {
+  right: 0;
+}
+.slideshow__next, .slideshow__prev {
+  position: absolute;
+  display: flex;
+  top: 167px;
+}
+.slideshow__next:hover, .slideshow__prev:hover {
+  top: 0;
+  height: 415px;
+  background: rgba(51, 49, 49, 0.505);
+}
+.slideshow__img {
   width: 100%;
   height: 415px;
   object-fit: cover;
+}
+.slideshow button {
+  background: none;
+  border: none;
 }
 
 .banner {
@@ -657,6 +677,9 @@ details[open] summary .collapse__arrow-down {
   }
 }
 
+.accommodation {
+  position: relative;
+}
 .accommodation__informations {
   display: flex;
   justify-content: space-between;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Banner from '../../components/Banner/Banner';
 import bannerHome from '../../assets/img/bannerHome.svg';
 import Footer from '../../components/Footer/Footer';
@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
     const text = "Chez vous, partout et ailleurs"
+  
     return (
         <div>
             <Banner url={bannerHome} text={text} />

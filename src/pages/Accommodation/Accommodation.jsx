@@ -1,21 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Data from '../../data/FetchLogement';
-import Cover from '../../components/Cover/Cover';
 import Tag from '../../components/Tag/Tag';
 import Collapse from '../../components/Collapse/Collapse';
 import Picture from '../../components/Picture/Picture';
 import Rate from '../../components/Rate/Rate';
+import Slideshow from '../../components/Slideshow/Slideshow';
 
 const Accommodation = () => {
     const params = useParams()
     const houseDetail = Data().filter((obj) => obj.id === params.id)
+    const [index, setNext] = useState(0)
 
     return (
         <div className='accommodation'>
             {houseDetail.map((detail) => (
                 <section key={detail.id}>
-                    <Cover img={detail.cover} />
+                    <Slideshow index={index} setNext={setNext} img={detail.pictures}  />
                     <section className='accommodation__informations'>
                         <section>
                             <h1 className='accommodation__title'>{detail.title}</h1>
@@ -36,9 +37,9 @@ const Accommodation = () => {
                                 <div>
                                     <Picture img={detail.host.picture} />
                                 </div>
-                                
+
                             </section>
-                            <Rate rating={detail.rating}/>
+                            <Rate rating={detail.rating} />
                         </section>
                     </section>
                     <section className='accommodation__description-container'>
