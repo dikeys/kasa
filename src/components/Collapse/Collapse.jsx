@@ -13,10 +13,10 @@ const Details = styled.details`
   width:100%
 }
 `
-const Collapse = ({ title, description, size = "100%", status  }) => {
+const Collapse = ({ title, description, size = "100%", status, key  }) => {
   return (
     <React.Fragment>
-      <Details open={status} className="collapse" size={size}>
+      <Details open={status} key={key} className="collapse" size={size}>
         <summary className="collapse__summary">
           <h1 className="collapse__heading">{title}</h1>
           <div>

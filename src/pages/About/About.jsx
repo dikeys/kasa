@@ -9,7 +9,10 @@ const About = () => {
         <div>
             <Banner url={bannerAbout} />
             {aboutData.map((data) => (
-                <Collapse title={data.title} description={data.description} />
+                <div key={data.id}>
+                    <Collapse title={data.title} description={data.description} />
+                </div>
+
             ))}
 
         </div>

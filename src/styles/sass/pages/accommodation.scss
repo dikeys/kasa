@@ -1,5 +1,7 @@
 .accommodation {
+
     position: relative;
+
     &__informations {
         display: flex;
         justify-content: space-between;
@@ -49,7 +51,6 @@
     &__equipment {
         margin: 0;
     }
-  
 
     @media #{$mobile}{
         &__informations {
@@ -60,7 +61,7 @@
         &__profil {
            float: right;
         }
-
+        
         &__description-container {
             display: flex;
             flex-direction: column;

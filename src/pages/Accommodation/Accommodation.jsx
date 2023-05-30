@@ -7,6 +7,7 @@ import Picture from '../../components/Picture/Picture';
 import Rate from '../../components/Rate/Rate';
 import Slideshow from '../../components/Slideshow/Slideshow';
 
+
 const Accommodation = () => {
     const params = useParams()
     const houseDetail = Data().filter((obj) => obj.id === params.id)
@@ -16,7 +17,9 @@ const Accommodation = () => {
         <div className='accommodation'>
             {houseDetail.map((detail) => (
                 <section key={detail.id}>
-                    <Slideshow index={index} setNext={setNext} img={detail.pictures}  />
+
+                    <Slideshow index={index} setNext={setNext} img={detail.pictures} />
+
                     <section className='accommodation__informations'>
                         <section>
                             <h1 className='accommodation__title'>{detail.title}</h1>
@@ -40,6 +43,7 @@ const Accommodation = () => {
 
                             </section>
                             <Rate rating={detail.rating} />
+
                         </section>
                     </section>
                     <section className='accommodation__description-container'>
