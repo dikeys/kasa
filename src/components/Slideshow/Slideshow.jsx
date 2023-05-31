@@ -1,6 +1,9 @@
 import imgPrev from '../../assets/img/previous.svg'
 import imgNext from '../../assets/img/next.svg'
-const Slideshow = ({ img, index, setNext }) => {
+import { useState } from 'react';
+const Slideshow = ({ img }) => {
+    
+    const [index, setNext] = useState(0)
     return (
         <div className='slideshow'>
             <button onClick={() => setNext(index <= 0 ? img.length -2: index - 1)} className='slideshow__prev'>
