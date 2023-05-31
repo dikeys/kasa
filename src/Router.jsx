@@ -16,7 +16,8 @@ function Router() {
         </Route>
         <Route path='/about' element={<About />}></Route>
         <Route path='*' element={<ErrorPage />}></Route>
-        <Route path='/Accommodation/:id' element={<Accommodation />}></Route>
+        <Route path='/Accommodation/:id(\d+)' element={<Accommodation />}></Route>
+        <Route path='/Accommodation/*' element={<ErrorPage />}></Route>
       </Routes>
     </BrowserRouter>
   );
