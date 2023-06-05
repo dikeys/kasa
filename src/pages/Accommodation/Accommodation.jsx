@@ -1,24 +1,32 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import Data from '../../data/FetchLogement';
 import Tag from '../../components/Tag/Tag';
 import Collapse from '../../components/Collapse/Collapse';
 import Picture from '../../components/Picture/Picture';
 import Rate from '../../components/Rate/Rate';
 import Slideshow from '../../components/Slideshow/Slideshow';
+import ErrorPage from '../ErrorPage/ErrorPage';
 
 
 const Accommodation = () => {
+
     const params = useParams()
     const houseDetail = Data().filter((obj) => obj.id === params.id)
 
 
+
+    if (houseDetail.length === 0) return (<ErrorPage />) 
+//  je testé avec navigate mais il me met systematique une page 404
+
+
     return (
         <div className='accommodation'>
+
             {houseDetail.map((detail) => (
                 <section key={detail.id}>
 
-                    <Slideshow  img={detail.pictures} />
+                    <Slideshow img={detail.pictures} />
 
                     <section className='accommodation__informations'>
                         <section>
