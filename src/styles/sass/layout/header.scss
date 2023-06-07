@@ -8,9 +8,10 @@
     width: 16%;
   }
 
-  &__logo{
+  &__logo {
     height: 90%;
   }
+
   &__navigation {
     display: flex;
     justify-content: space-between;
@@ -37,6 +38,7 @@
             width: 100%;
           }
         }
+
         @keyframes anim {
           to {
             width: 100%;
@@ -50,46 +52,60 @@
       font-size: 24px;
       font-weight: 500;
       line-height: 34.22px;
-      a:active, a:visited {
+
+      a:active,
+      a:visited {
         color: $primary;
       }
     }
   }
-  @media #{$mobile}{
-    &__logo{
+
+  @media #{$tablet} {
+    &__logo {
       height: 100%;
     }
+
     &__wrapper {
       width: 30%;
     }
-    &__navigation {
-     width: 100%;
 
-     &--link {
-      font-size: 14px;
-      font-weight: 100;
-    }
+    &__navigation {
+      width: 100%;
+
+      &--link {
+        font-size: 20px;
+        font-weight: 100;
+      }
 
     }
 
   }
-  @media #{$tablet}{
-    &__logo{
-      height: 100%;
+
+  @media #{$mobile} {
+    &__logo {
+      height: 50% !important;
     }
+
     &__wrapper {
       width: 30%;
     }
+
     &__navigation {
-     width: 100%;
+      width: 100%;
 
-     &--link {
-      font-size: 20px;
-      font-weight: 100;
+      &--link {
+        font-size: 14px;
+        font-weight: 100;
+      }
+
     }
 
-    }
+  }
 
+  @media screen and (max-width:413px) {
+    justify-content: space-evenly;
+    &__wrapper {
+      width: 39%;
+    }
   }
 }
-

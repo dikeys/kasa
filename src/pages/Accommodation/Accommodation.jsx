@@ -11,13 +11,16 @@ import ErrorPage from '../ErrorPage/ErrorPage';
 
 const Accommodation = () => {
 
+    const navigate = useNavigate()
     const params = useParams()
     const houseDetail = Data().filter((obj) => obj.id === params.id)
 
 
 
-    if (houseDetail.length === 0) return (<ErrorPage />) 
-//  je testé avec navigate mais il me met systematique une page 404
+    if (houseDetail.length === 0) {
+       return navigate('/404')
+    } 
+
 
 
     return (

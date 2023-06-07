@@ -585,23 +585,9 @@ details[open] summary .collapse__arrow-down {
   font-weight: 500;
   line-height: 34.22px;
 }
-.header__navigation--link a:active, .header__navigation--link a:visited {
+.header__navigation--link a:active,
+.header__navigation--link a:visited {
   color: #FF6060;
-}
-@media only screen and (max-width: 960px) {
-  .header__logo {
-    height: 100%;
-  }
-  .header__wrapper {
-    width: 30%;
-  }
-  .header__navigation {
-    width: 100%;
-  }
-  .header__navigation--link {
-    font-size: 14px;
-    font-weight: 100;
-  }
 }
 @media only screen and (max-width: 1400px) {
   .header__logo {
@@ -616,6 +602,29 @@ details[open] summary .collapse__arrow-down {
   .header__navigation--link {
     font-size: 20px;
     font-weight: 100;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .header__logo {
+    height: 50% !important;
+  }
+  .header__wrapper {
+    width: 30%;
+  }
+  .header__navigation {
+    width: 100%;
+  }
+  .header__navigation--link {
+    font-size: 14px;
+    font-weight: 100;
+  }
+}
+@media screen and (max-width: 413px) {
+  .header {
+    justify-content: space-evenly;
+  }
+  .header__wrapper {
+    width: 39%;
   }
 }
 
