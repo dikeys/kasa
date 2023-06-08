@@ -36,7 +36,7 @@
         color: white;
     }
 
-    &__arrow-down {
+    &__arrow-up {
         display: none;
     }
 
@@ -58,10 +58,11 @@
 }
 
 details[open] summary .collapse__arrow-up {
-    display: none;
+   
+    display: initial;
 }
 
 details[open] summary .collapse__arrow-down {
-    display: initial;
+    display: none;
 }
 

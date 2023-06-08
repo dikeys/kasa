@@ -10,7 +10,7 @@ const Home = () => {
     const text = "Chez vous, partout et ailleurs"
     return (
         <div>
-            <Banner url={bannerHome} text={text} />
+            <Banner classBg="banner__home banner__bg" text={text} />
             <div className='card-wrapper'>
                 {Data().map((elt) => (
                     <Link key={elt.id} to={`/accommodation/${elt.id}`} >

@@ -7,7 +7,7 @@ const About = () => {
 
     return (
         <div>
-            <Banner url={bannerAbout} />
+            <Banner classBg="banner__bg banner__about" />
             {aboutData.map((data) => (
                 <div key={data.id}>
                     <Collapse title={data.title} description={data.description} />

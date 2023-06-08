@@ -21,16 +21,24 @@
         color: white;
        
     }
+    &__home{
+      background : center / cover no-repeat url(../assets/img/bannerHome.svg), center / cover no-repeat url(../assets/img/Background.png);
+
+    }
+    &__about{
+      background : center / cover no-repeat url(../assets/img/bannerAbout.png), center / cover no-repeat url(../assets/img/Background.png);
+
+    }
     @media #{$mobile}{
         &__heading {
            margin-left: 16px;
             font-weight: 100;
-            font-size: 24px;
+            font-size: 34px;
             line-height: 24px;
-            width: 223px;   
+            width: 263px;   
         }
         &__bg{
-            height: 111px;
+            height: 161px;
             display: flex;
             justify-content: flex-start;
 

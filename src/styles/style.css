@@ -402,7 +402,7 @@ ul {
   height: 28.14px;
   color: white;
 }
-.collapse__arrow-down {
+.collapse__arrow-up {
   display: none;
 }
 .collapse__description {
@@ -422,11 +422,11 @@ ul {
 }
 
 details[open] summary .collapse__arrow-up {
-  display: none;
+  display: initial;
 }
 
 details[open] summary .collapse__arrow-down {
-  display: initial;
+  display: none;
 }
 
 .slideshow {
@@ -500,16 +500,22 @@ details[open] summary .collapse__arrow-down {
   line-height: 68.45px;
   color: white;
 }
+.banner__home {
+  background: center/cover no-repeat url(../assets/img/bannerHome.svg), center/cover no-repeat url(../assets/img/Background.png);
+}
+.banner__about {
+  background: center/cover no-repeat url(../assets/img/bannerAbout.png), center/cover no-repeat url(../assets/img/Background.png);
+}
 @media only screen and (max-width: 960px) {
   .banner__heading {
     margin-left: 16px;
     font-weight: 100;
-    font-size: 24px;
+    font-size: 34px;
     line-height: 24px;
-    width: 223px;
+    width: 263px;
   }
   .banner__bg {
-    height: 111px;
+    height: 161px;
     display: flex;
     justify-content: flex-start;
   }
@@ -633,9 +639,10 @@ details[open] summary .collapse__arrow-down {
   background: #F2F0F0;
   border-radius: 25px;
   padding: 56px 50px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 340px);
+  justify-content: center;
+  gap: 50px 90px;
 }
 
 .card {
@@ -661,9 +668,6 @@ details[open] summary .collapse__arrow-down {
   line-height: 25.67px;
 }
 @media only screen and (max-width: 960px) {
-  .card {
-    width: 388px;
-  }
   .card-wrapper {
     justify-content: center;
     padding: 0;
